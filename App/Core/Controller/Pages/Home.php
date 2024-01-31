@@ -10,7 +10,7 @@ class Home {
 
     public static function render($params = []) {
 
-        $viewPath = "pages/home";
+        $viewPath = "Pages/Home";
         $vars = [
             "navbar" => Navbar::render([
                 "siteName" =>  SITE_NAME,

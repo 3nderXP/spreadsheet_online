@@ -1,0 +1,63 @@
+.form {
+    box-shadow: 0 30px 60px rgb(0, 0, 0, .1);
+    max-width: 480px;
+    width: 100%;
+    position: relative;
+    margin:  80px auto;
+}
+
+.form .previous {
+    position: absolute;
+    bottom: calc(100% + 20px);
+    left: 0;
+    background-color: var(--bg);
+    box-shadow: inherit;
+}
+
+.form .previous:hover {
+    color: var(--text-color-3);
+    background-color: var(--color-10);
+}
+
+.form .fields.quick-methods {
+    display: flex;
+    justify-content: center;
+}
+
+.form .fields.quick-methods .method {
+    flex: none;
+}
+
+.form .fields.quick-methods .method button {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 15px 20px;
+}
+
+.form .fields.quick-methods .method button .icon {
+    --size: 30px;
+    fill: var(--color-10);
+    width: var(--size);
+    height: var(--size);
+    background-color: currentColor;
+    padding: 5px;
+    border-radius: 50%;
+}
+
+@media (max-width: 853px) {
+
+    .form {
+        max-width: none;
+        min-height: 100vh;
+        margin: 0;
+    }
+
+    .form .previous {
+        position: static;
+        color: var(--text-color-3);
+        background-color: var(--color-10);
+        box-shadow: none;
+    }
+    
+}

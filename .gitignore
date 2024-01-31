@@ -1,1 +1,3 @@
 debug.*
+debug/
+App/logs

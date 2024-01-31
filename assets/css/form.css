@@ -1,0 +1,114 @@
+.form {
+    --bg: var(--color-30);
+    --inputs-radius: var(--radius-default);
+    --inputs-padding: 20px;
+    --inputs-border: 2px solid var(--color-10);
+    --default-txt-color: var(--color-10);
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    background-color: var(--bg);
+    padding: 40px;
+    border-radius: var(--radius-default);
+    color: var(--default-txt-color);
+}
+
+.form .title {
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.form .text-separator {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 10px;
+}
+
+.form .text-separator::before, .form .text-separator::after {
+    content: '';
+    flex: 1;
+    height: 2px;
+    background-color: var(--color-10);
+    border-radius: var(--radius-cylinder);
+}
+
+.form .fields {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form .fields.inline {
+    flex-direction: row;
+}
+
+.form .fields.inline .field {
+    flex: 1;
+}
+
+.form .fields.inline .field.large {
+    flex: 2;
+}
+
+.form .fields.inline .field.very-large {
+    flex: 3;
+}
+
+.form .fields .field {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.form .fields .field label {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: bold;
+}
+
+.form .fields .field label .icon {
+    width: 20px;
+    height: 20px;
+    fill: currentColor;
+}
+
+.form .fields .field :is(input, select, button, textarea) {
+    padding: var(--inputs-padding);
+    border-radius: var(--inputs-radius);
+    border: var(--inputs-border);
+    color: currentColor;
+    background-color: transparent;
+    font-size: 12pt;
+    font-weight: bold;
+    width: 100%;
+}
+
+.form .fields .field :is(input, select, textarea)::placeholder {
+    color: currentColor;
+    opacity: .5;
+}
+
+.form .fields .field :is(input, select, button, textarea):focus {
+    outline: 4px solid var(--color-10);
+}
+
+.form .fields .field :is(input[type="submit"], button) {
+    background-color: var(--color-10);
+    color: var(--text-color-3);
+    font-weight: bold;
+    font-size: 12pt;
+    cursor: pointer;
+    border: none;
+    white-space: nowrap;
+}
+
+.form .fields .field :is(input[type="submit"], button).outlined {
+    background: none;
+    border: var(--inputs-border);
+    color: var(--default-txt-color);
+}

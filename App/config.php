@@ -16,3 +16,14 @@ define("SITE_DESCRIPTION", "Crie, personalize e gerencie suas planilhas de forma
 define("SITE_THEME", "#6203fc");
 define("SITE_LANG", "pt-BR");
 define("SITE_CHARSET", "UTF-8");
+
+// Configurações do sistema
+
+define("LOGS_PATH", __DIR__."/logs");
+
+if(!is_dir(LOGS_PATH)) mkdir(LOGS_PATH, 0700);
+
+error_reporting(E_ALL);
+
+ini_set("display_error", 1);
+ini_set("error_log", LOGS_PATH."/backend.log");
